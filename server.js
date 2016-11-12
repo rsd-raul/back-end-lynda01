@@ -36,6 +36,7 @@ mongoose.connect("mongodb://localhost:27017/test", function(err, db){
 
 var auth = require('./controllers/auth');
 app.post('/auth/register', auth.register);
+app.post('/auth/login', auth.login);
 
 var message = require('./controllers/message');
 var checkAuthenticated = require('./services/checkAuthenticated');
